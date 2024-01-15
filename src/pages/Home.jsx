@@ -15,14 +15,12 @@ import Footer from "./Footer";
 import Hero from "../components/Hero";
 
 const Home = () => {
-  const { addtocart, cartitems } = useContext(Shopcontext);
+  const { addtocart, cartitems, subtotal, counter } = useContext(Shopcontext);
 
-  const [imgurl, setimgurl] = useState(banner);
-  const [productname, setproductname] = useState("");
-  const [price, setprice] = useState("");
   const [togglebanner, settogglebanner] = useState(true);
 
   const navigate = useNavigate();
+  // const itemquantity = cartitems[id];
 
   return (
     <main className=' w-full   relative'>
@@ -71,12 +69,13 @@ const Home = () => {
       <section>
         <Footer />
       </section>
-      <div className=' fixed right-0 top-[20%]'>
+      <div className=' fixed right-0 top-[20%] z-20 flex justify-end items-start'>
         <Link to={"/cart"}>
           <AiOutlineShoppingCart
             style={{ width: 43, height: 43, background: "red" }}
           />
         </Link>
+        <p className=' bg-black rounded-full px-1 text-white'>{counter}</p>
       </div>
     </main>
   );
