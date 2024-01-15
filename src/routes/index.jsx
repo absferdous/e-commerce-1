@@ -9,6 +9,7 @@ import { ShopContextProvider } from "../context/shopcontext";
 import Cart from "../components/Cart";
 import Checkout from "../pages/Checkout";
 import Footer from "../components/Footer";
+import ProductDetails from "../pages/ProductDetails";
 
 export const Index = () => {
   return (
@@ -24,6 +25,7 @@ export const Index = () => {
             <Route path='/sign-in' element={<Signin />}></Route>
             <Route path='/about' element={<About />}></Route>
             <Route path='/check-out' element={<Checkout />}></Route>
+            <Route path='/details' element={<ProductDetails />}></Route>
           </Routes>
         </BrowserRouter>
       </ShopContextProvider>

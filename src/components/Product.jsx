@@ -1,13 +1,32 @@
 import React, { useState, useContext } from "react";
 import { Shopcontext } from "../context/shopcontext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import banner from "../assets/images/products/banner.webp";
+import ProductDetails from "../pages/ProductDetails";
 
 const Product = props => {
+  const [imgurl, setimgurl] = useState(banner);
+
+  const [title, setTitle] = useState("");
+
+  const [productPrice, setProductPrice] = useState("");
   const { addtocart, cartitems } = useContext(Shopcontext);
+  const [desc, setdesc] = useState("");
+  const [show, setshow] = useState(false);
+
   const { id, productName, price, productImage, productDesc } = props.data;
   const itemquantity = cartitems[id];
-  const [show, setshow] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleCLick = () => {
+    setimgurl(productImage);
+    setTitle(productName);
+    setdesc(productDesc);
+    setProductPrice(price);
+    setshow(true);
+  };
 
   return (
     <section className='flex mb-8  ' id='shop'>
@@ -22,7 +41,8 @@ const Product = props => {
             justify-center items-center'
         >
           <img
-            className='hover:transition-shadow object-contain h-40 w-80'
+            onClick={handleCLick}
+            className=' object-contain h-40 w-80'
             src={productImage}
             alt={productName}
           />
@@ -43,7 +63,15 @@ const Product = props => {
             </button>
           </div>
 
-          {show && <p className=' px-3 pb-2 relative '>{productDesc}</p>}
+          {show &&
+            navigate("/details", {
+              state: {
+                imgurl,
+                title,
+                productPrice,
+                desc,
+              },
+            })}
         </div>
         <div
           className='ml-4

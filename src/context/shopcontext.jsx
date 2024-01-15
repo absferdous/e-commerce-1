@@ -13,9 +13,11 @@ export const ShopContextProvider = ({ children }) => {
   };
 
   const [cartitems, setcartitems] = useState(getItems());
+  const [counter, setcounter] = useState(0);
 
   const addtocart = itemid => {
     setcartitems(prev => ({ ...prev, [itemid]: prev[itemid] + 1 }));
+    setcounter(prev => prev + 1);
   };
   const removefromcart = itemid => {
     setcartitems(prev => ({ ...prev, [itemid]: prev[itemid] - 1 }));
@@ -41,6 +43,7 @@ export const ShopContextProvider = ({ children }) => {
     addtocart,
     cartitems,
     removefromcart,
+    counter,
   };
 
   return (
