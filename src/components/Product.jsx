@@ -14,6 +14,7 @@ const Product = props => {
   const { addtocart, cartitems } = useContext(Shopcontext);
   const [desc, setdesc] = useState("");
   const [show, setshow] = useState(false);
+  const [productid, setproductid] = useState(null);
 
   const { id, productName, price, productImage, productDesc } = props.data;
   const itemquantity = cartitems[id];
@@ -25,6 +26,7 @@ const Product = props => {
     setTitle(productName);
     setdesc(productDesc);
     setProductPrice(price);
+    setproductid(id);
     setshow(true);
   };
 
@@ -70,6 +72,7 @@ const Product = props => {
                 title,
                 productPrice,
                 desc,
+                productid,
               },
             })}
         </div>

@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <nav
       className='px-1  fixed top-0 z-20 w-full  shadow-2xl 
-    flex justify-between bg-slate-50 items-center'
+    flex justify-between bg-black items-center text-white'
     >
       <div>
         <Link to={"/"}>
