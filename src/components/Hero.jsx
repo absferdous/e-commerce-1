@@ -1,18 +1,26 @@
 import React from "react";
 
+import { motion } from "framer-motion";
+
 import banner from "../assets/images/products/banner.webp";
 
 const Hero = () => {
   return (
     <section className=' w-full relative mt-6'>
       <div className='  flex max-lg:flex-col justify-center items-center bg-gradient-to-tr from-[#221e1e] to-red-50'>
-        <div>
+        <motion.div
+          // initial={{ scale: 0 }}
+          animate={{ y: 100, x: 50 }}
+          transition={{
+            duration: 0.5,
+          }}
+        >
           <img
             src={banner}
             alt='hero banner'
             className='object-contain relative z-10'
           />
-        </div>
+        </motion.div>
         <div className=' '>
           <h1 className=' max-lg:pl-3 text-6xl max-lg:text-4xl font-montesrrat absolute top-[10%] right-0'>
             Elevate your{" "}
