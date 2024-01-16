@@ -26,7 +26,7 @@ const Hero = () => {
             <span className='relative z-20 text-white font-bold'>
               headphones
             </span>{" "}
-            at UNREAL .
+            at UNREAL
           </h1>
         </div>
       </div>

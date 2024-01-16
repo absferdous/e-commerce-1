@@ -11,9 +11,9 @@ const Cart = () => {
   return (
     <div>
       {totalamount > 0 ? (
-        <h1 className=' mt-10 max-sm:text-7xl text-[100px] text-center'>
+        <h1 className=' mt-10  max-sm:text-7xl text-[100px] text-center'>
           YOUR <br />
-          <span className=' text-wrap px-4 mt-2 bg-red-600 text-white font-extrabold'>
+          <span className=' text-wrap px-4 mt-2  text-black font-extrabold'>
             ITEMS
           </span>
         </h1>
@@ -37,14 +37,11 @@ const Cart = () => {
 
       {totalamount > 0 && (
         <div
-          className='shadow-2xl border border-t-black mt-14 mb-4  text-black flex flex-col justify-center items-center h-[200px] 
+          className='shadow-2xl  mt-14 mb-4  text-black flex flex-col justify-center items-center h-[200px] 
        '
         >
           <h3 className=' text-6xl text-black'>
-            SUB{" "}
-            <span className='text-wrap px-4 mt-2 bg-red-600 text-white '>
-              TOTAL
-            </span>
+            SUB <span className='text-wrap px-4 mt-2  text-black '>TOTAL</span>
           </h3>
           <p className=' text-3xl font-montesrrat mt-4 border border-white py-7 px-5'>
             ${totalamount}
