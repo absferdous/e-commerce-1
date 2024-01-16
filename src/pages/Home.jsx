@@ -66,9 +66,6 @@ const Home = () => {
       <section>
         <Sales />
       </section>
-      <section>
-        <Footer />
-      </section>
       <div className=' fixed right-0 top-[20%] z-20 flex justify-end items-start'>
         <Link to={"/cart"}>
           <AiOutlineShoppingCart

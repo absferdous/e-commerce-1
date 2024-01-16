@@ -16,12 +16,12 @@ const Sales = () => {
         />
       </div>
       <div>
-        <h1 className=' font-bold max-sm:text-4xl text-8xl absolute top-0 right-10'>
-          SUMMER <span className=' text-white'>SALES</span>
+        <h1 className=' font-bold max-sm:text-4xl text-8xl absolute top-0 left-10'>
+          SUMMER <br /> <span className=' text-white'>SALES</span>
         </h1>
       </div>
-      <div>
-        <p className=' max-w-lg font-montesrrat text-2xl'>
+      <div className=' flex justify-center items-center relative'>
+        <p className='  max-lg:hidden max-lg:mt-[30px] max-w-lg font-montesrrat text-2xl max-lg:text-lg'>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur,
           perferendis.
         </p>

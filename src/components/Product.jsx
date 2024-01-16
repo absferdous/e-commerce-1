@@ -16,7 +16,8 @@ const Product = props => {
   const [show, setshow] = useState(false);
   const [productid, setproductid] = useState(null);
 
-  const { id, productName, price, productImage, productDesc } = props.data;
+  const { id, productName, price, productImage, productDesc } =
+    props.data || {};
   const itemquantity = cartitems[id];
 
   const navigate = useNavigate();
@@ -26,12 +27,12 @@ const Product = props => {
     setTitle(productName);
     setdesc(productDesc);
     setProductPrice(price);
-    setproductid(id);
+    // setproductid(id);
     setshow(true);
   };
 
   return (
-    <section className='flex mb-8  ' id='shop'>
+    <section className='flex mb-8 ' id='shop'>
       <div
         className='max-sm:mx-2 mt-4 flex flex-col flex-wrap
       rounded  w-full'
@@ -72,7 +73,8 @@ const Product = props => {
                 title,
                 productPrice,
                 desc,
-                productid,
+                id,
+                // productid,
               },
             })}
         </div>

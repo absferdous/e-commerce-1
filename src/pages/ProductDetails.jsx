@@ -5,22 +5,24 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 
 const ProductDetails = () => {
   const { addtocart, cartitems, subtotal, counter } = useContext(Shopcontext);
+  // const itemquantity = cartitems[id];
 
   const location = useLocation();
   const { state } = location;
   return (
-    <section className=' relative  w-full mt-11 min-h-screen'>
+    <section className=' relative  w-full mt-6 min-h-screen'>
       <div
-        className='  py-6 w-full flex flex-col justify-center items-center m-3 relative
+        className='  py-6 w-full flex flex-col justify-center items-center max-lg:mr-4 max-lg:pr-1
+         relative
        '
       >
         <div
-          className=' rounded-xl w-full lg:w-[70%] px-3
+          className=' rounded w-full lg:w-[70%] px-3
             py-11 flex justify-center items-center relative
         bg-gradient-to-tr from-[#0a0a0a] to-red-50'
         >
           <button
-            onClick={() => addtocart(cartitems[id])}
+            onClick={() => addtocart(state.id)}
             className=' absolute bottom-7 rounded-xl px-5 py-1 bg-black text-white '
           >
             add to cart
@@ -42,8 +44,8 @@ const ProductDetails = () => {
             className=' object-contain'
           />
           <p
-            className='  text-8xl font-semibold 
-          absolute top-[25%] left-0'
+            className='  text-white font-extrabold max-lg:text-6xl text-8xl  
+          absolute top-[39%] left-2'
           >
             ${state.productPrice}
           </p>
@@ -58,6 +60,7 @@ const ProductDetails = () => {
             >
               checkout
             </button>
+
             <button className=' px-5 py-2 bg-black text-white rounded-xl mt-5'>
               continue shopping
             </button>

@@ -15,6 +15,7 @@ const Navbar = () => {
       </div>
       <div className=' flex items-center gap-4'>
         <a href='#shop'>SHOP</a>
+        {/* <Link to={"/shop"}>SHOP</Link> */}
         <Link to={"/cart"}>
           <AiOutlineShoppingCart style={{ width: 43, height: 43 }} />
         </Link>
