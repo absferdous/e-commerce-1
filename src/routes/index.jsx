@@ -25,7 +25,6 @@ export const Index = () => {
             <Route path='/about' element={<About />}></Route>
             <Route path='/check-out' element={<Checkout />}></Route>
             <Route path='/details' element={<ProductDetails />}></Route>
-            {/* <Route path='/shop' element={<Product />}></Route> */}
           </Routes>
           <Footer />
         </HashRouter>
