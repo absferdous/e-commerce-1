@@ -4,7 +4,7 @@ import { Shopcontext } from "../context/shopcontext";
 const CartItems = props => {
   const { addtocart, removefromcart, cartitems, updatecart } =
     useContext(Shopcontext);
-  const { id, productName, price, productImage, productDesc } = props.data;
+  const { id, productName, price, productImage } = props.data;
   return (
     <div className=' flex flex-col justify-center items-center'>
       <div>
