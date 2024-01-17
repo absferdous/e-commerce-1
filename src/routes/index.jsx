@@ -17,7 +17,7 @@ export const Index = () => {
   return (
     <div>
       <ShopContextProvider>
-        <BrowserRouter>
+        <HashRouter>
           <Navbar />
           <Routes>
             <Route path='/' element={<Home />}></Route>
@@ -29,7 +29,7 @@ export const Index = () => {
             {/* <Route path='/shop' element={<Product />}></Route> */}
           </Routes>
           <Footer />
-        </BrowserRouter>
+        </HashRouter>
       </ShopContextProvider>
     </div>
   );
