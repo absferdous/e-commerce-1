@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { useLocation, Link, useNavigate } from "react-router-dom";
 import { Shopcontext } from "../context/shopcontext";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
 const ProductDetails = () => {
   const { addtocart, cartitems, subtotal, counter } = useContext(Shopcontext);
   // const itemquantity = cartitems[id];
-
+  const navigate = useNavigate();
   const location = useLocation();
   const { state } = location;
   return (
@@ -36,13 +37,16 @@ const ProductDetails = () => {
           >
             {state.title}
           </h3>
-          <img
-            src={state.imgurl}
-            height={120}
-            width={340}
-            alt='details'
-            className=' object-contain'
-          />
+          <motion.div animate={{ x: 200 }} transition={{ duration: 0.75 }}>
+            <img
+              src={state.imgurl}
+              height={120}
+              width={340}
+              alt='details'
+              className=' object-contain'
+            />
+          </motion.div>
+
           <p
             className='  text-white font-extrabold max-lg:text-6xl text-8xl  
           absolute top-[39%] left-2'
@@ -55,13 +59,17 @@ const ProductDetails = () => {
 
           <div className=' flex gap-4'>
             <button
+              onClick={() => navigate("/chec-kout")}
               className=' hover:bg-black hover:text-white
                           px-5 py-2 bg-white text-black border border-black rounded-xl mt-5'
             >
               checkout
             </button>
 
-            <button className=' px-5 py-2 bg-black text-white rounded-xl mt-5'>
+            <button
+              onClick={() => navigate("/shop")}
+              className=' px-5 py-2 bg-black text-white rounded-xl mt-5'
+            >
               continue shopping
             </button>
           </div>

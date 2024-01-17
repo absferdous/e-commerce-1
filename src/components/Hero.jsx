@@ -9,10 +9,10 @@ const Hero = () => {
     <section className=' w-full relative mt-6'>
       <div className='  flex max-lg:flex-col justify-center items-center bg-gradient-to-tr from-[#221e1e] to-red-50'>
         <motion.div
-          // initial={{ scale: 0 }}
-          animate={{ y: 100, x: 50 }}
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
           transition={{
-            duration: 0.5,
+            duration: 0.75,
           }}
         >
           <img
