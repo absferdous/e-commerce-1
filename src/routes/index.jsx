@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, Route, Routes } from "react-router-dom";
+
 import Home from "../pages/Home";
 
 import About from "../pages/About";
@@ -11,12 +11,13 @@ import Footer from "../pages/Footer";
 import ProductDetails from "../pages/ProductDetails";
 
 import Shop from "../pages/Shop";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 export const Index = () => {
   return (
     <div>
       <ShopContextProvider>
-        <HashRouter>
+        <BrowserRouter>
           <Navbar />
           <Routes>
             <Route path='/' element={<Home />}></Route>
@@ -27,7 +28,7 @@ export const Index = () => {
             <Route path='/details' element={<ProductDetails />}></Route>
           </Routes>
           <Footer />
-        </HashRouter>
+        </BrowserRouter>
       </ShopContextProvider>
     </div>
   );
