@@ -5,8 +5,8 @@ import { Shopcontext } from "../context/shopcontext";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
 const ProductDetails = () => {
-  const { addtocart, cartitems, subtotal, counter } = useContext(Shopcontext);
-  // const itemquantity = cartitems[id];
+  const { addtocart, counter } = useContext(Shopcontext);
+
   const navigate = useNavigate();
   const location = useLocation();
   const { state } = location;

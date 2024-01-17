@@ -1,8 +1,7 @@
 import React from "react";
-import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
-import Contact from "../pages/Contact";
-// import Signin from "../pages/Signin";
+
 import About from "../pages/About";
 import Navbar from "../components/Navbar";
 import { ShopContextProvider } from "../context/shopcontext";
@@ -10,7 +9,7 @@ import Cart from "../components/Cart";
 import Checkout from "../pages/Checkout";
 import Footer from "../pages/Footer";
 import ProductDetails from "../pages/ProductDetails";
-import Product from "../components/Product";
+
 import Shop from "../pages/Shop";
 
 export const Index = () => {

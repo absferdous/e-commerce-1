@@ -1,26 +1,18 @@
 import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { PRODUCTS } from "../constants/Product";
 import { Shopcontext } from "../context/shopcontext";
 import Product from "../components/Product";
-import banner from "../assets/images/products/banner.webp";
-// import banner from "/assets/images/products/banner.webp";
-import hero2 from "../assets/heroImages/hero-2.jpg";
+
 import ImageSlider from "../components/ImageSlider";
-import ImageCard from "../components/ImageCard";
-import hero3 from "../assets/heroImages/hero-3.jpg";
+
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import Sales from "./Sales";
-import Footer from "./Footer";
+
 import Hero from "../components/Hero";
 
 const Home = () => {
-  const { addtocart, cartitems, subtotal, counter } = useContext(Shopcontext);
-
-  const [togglebanner, settogglebanner] = useState(true);
-
-  const navigate = useNavigate();
-  // const itemquantity = cartitems[id];
+  const { counter } = useContext(Shopcontext);
 
   return (
     <main className=' w-full   relative'>
