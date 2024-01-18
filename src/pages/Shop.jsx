@@ -16,7 +16,7 @@ const Shop = () => {
         }}
         className='  mt-10 text-center max-lg:text-5xl text-8xl'
       >
-        <h1>BEST SELLER PRODUCTS</h1>
+        <h1 className=' max-lg:text-4xl'>BEST SELLER PRODUCTS</h1>
       </motion.div>
       <section
         className=' w-full grid grid-cols-2 lg:grid-cols-4

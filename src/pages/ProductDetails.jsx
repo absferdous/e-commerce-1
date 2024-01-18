@@ -37,7 +37,7 @@ const ProductDetails = () => {
           >
             {state.title}
           </h3>
-          <motion.div animate={{ x: 200 }} transition={{ duration: 0.75 }}>
+          <motion.div animate={{ y: 200 }} transition={{ duration: 0.75 }}>
             <img
               src={state.imgurl}
               height={120}

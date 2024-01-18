@@ -32,12 +32,12 @@ const ImageSlider = () => {
           <div className='flex  items-end justify-end  gap-5'>
             <button
               onClick={handlePrev}
-              className='hover:px-8 px-4 bg-black rounded-full text-white'
+              className=' px-4 bg-black rounded-full text-white'
             >
               Prev
             </button>
             <button
-              className=' hover:px-4 px-8 bg-white rounded-full text-black '
+              className='  px-8 bg-white rounded-full text-black '
               onClick={handleNext}
             >
               next
