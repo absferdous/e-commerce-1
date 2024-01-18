@@ -29,7 +29,7 @@ const ProductDetails = () => {
             add to cart
           </button>
           <h3
-            className=' px-2  
+            className='  px-2  
             
             font-montesrrat 
                         text-5xl font-bold
