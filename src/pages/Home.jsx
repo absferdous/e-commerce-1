@@ -42,7 +42,7 @@ const Home = () => {
         <h1
           className=' 
            bg-gradient-to-tr from-red-800  to-red-300  text-transparent  bg-clip-text 
-        text-8xl max-sm:text-4xl font-extrabold font-montesrrat text-center'
+        text-8xl max-sm:text-4xl font-extrabold font-montesrrat text-center max-lg:text-6xl'
         >
           SEE MORE <span className='bg-black text-white px-3'>PRODUCTS</span>
         </h1>
