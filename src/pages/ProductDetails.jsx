@@ -37,7 +37,11 @@ const ProductDetails = () => {
           >
             {state.title}
           </h3>
-          <motion.div animate={{ y: 200 }} transition={{ duration: 0.75 }}>
+          <motion.div
+          // animate={{ y: 70 }}
+          // transition={{ duration: 0.75 }}
+          // initial={{ scale: 1 }}
+          >
             <img
               src={state.imgurl}
               height={120}
@@ -46,13 +50,18 @@ const ProductDetails = () => {
               className=' object-contain'
             />
           </motion.div>
-
-          <p
-            className='  text-white font-extrabold max-lg:text-6xl text-8xl  
-          absolute top-[39%] left-2'
+          <motion.div
+          // animate={{ y: 100 }}
+          // transition={{ duration: 0.75 }}
+          // initial={{ scale: 1 }}
           >
-            ${state.productPrice}
-          </p>
+            <p
+              className='  text-white font-extrabold max-lg:text-6xl text-8xl  
+          absolute top-[39%] left-2'
+            >
+              ${state.productPrice}
+            </p>
+          </motion.div>
         </div>
         <div className=' flex flex-col justify-center items-center mt-8'>
           <p className='  mt-2  b px-2 py-1 w-full lg:w-[70%]'> {state.desc}</p>
